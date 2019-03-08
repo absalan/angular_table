@@ -15,4 +15,20 @@ export class TableComponent implements OnInit {
     this.books = this.lists;
   }
 
+  priceIcon(price) {
+    let pricePadge = '';
+    const val = price;
+    switch (true) {
+      case val <= 50:
+        pricePadge = 'low';
+        break;
+      case val > 50 && val <= 100:
+        pricePadge = 'middle';
+        break;
+      case val > 100:
+        pricePadge = 'premium';
+        break;
+    }
+    return pricePadge;
+  }
 }

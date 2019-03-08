@@ -2,22 +2,22 @@
   <thead>
     <tr>
       <th>&nbsp;</th>
-      <th style="width: 20%">
+      <th>
         <fieldSorter by="id">ID</fieldSorter>
       </th>
-      <th style="width: 50%">
+      <th>
         <fieldSorter by="name">Name</fieldSorter>
       </th>
-      <th style="width: 50%">
+      <th>
         <fieldSorter by="author">Author</fieldSorter>
       </th>
-      <th style="width: 10%">
+      <th>
         <fieldSorter by="year">Year</fieldSorter>
       </th>
-      <th style="width: 20%">
+      <th>
         <fieldSorter by="pages">Pages</fieldSorter>
       </th>
-      <th style="width: 20%">
+      <th>
         <fieldSorter by="price">Price</fieldSorter>
       </th>
     </tr>
@@ -33,7 +33,7 @@
       <td>{{ item.author }}</td>
       <td>{{ item.year }}</td>
       <td>{{ item.pages }}</td>
-      <td>${{ item.price }}</td>
+      <td><span class="price-icon {{ priceIcon(item.price) }}"></span> ${{ item.price }}</td>
     </tr>
   </tbody>
   <tfoot>

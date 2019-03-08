@@ -270,6 +270,28 @@ table {
     box-sizing: content-box;
     min-width: 65px;
 
+    span.price-icon {
+      width: 15px;
+      height: 15px;
+      position: relative;
+      background: #ddd;
+      display: inline-block;
+      border-radius: 25px;
+      margin-right: 5px;
+
+      &.low {
+        background: #43A047;
+      }
+
+      &.middle {
+        background: #ffa726;
+      }
+
+      &.premium {
+        background: #EF5350;
+      }
+    }
+
     &.l {
       text-align: right;
     }
@@ -299,7 +321,7 @@ table {
 }
 
 .col6 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 // Table Pagination

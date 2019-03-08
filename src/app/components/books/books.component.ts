@@ -49,7 +49,7 @@ export class BooksComponent implements OnInit {
         author: this.genAuthorsName(),
         year: this.randomNum(1990, 2019),
         pages: this.randomNum(300, 800),
-        price: this.randomNum(50, 150)
+        price: this.randomNum(20, 150)
       });
     }
   }
