@@ -1,0 +1,46 @@
+<table class="table table-striped" [Data]="books" #list="tableDataVar" [rowsOnPage]="5">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th style="width: 20%">
+        <fieldSorter by="id">ID</fieldSorter>
+      </th>
+      <th style="width: 50%">
+        <fieldSorter by="name">Name</fieldSorter>
+      </th>
+      <th style="width: 50%">
+        <fieldSorter by="author">Author</fieldSorter>
+      </th>
+      <th style="width: 10%">
+        <fieldSorter by="year">Year</fieldSorter>
+      </th>
+      <th style="width: 20%">
+        <fieldSorter by="pages">Pages</fieldSorter>
+      </th>
+      <th style="width: 20%">
+        <fieldSorter by="price">Price</fieldSorter>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of list.data">
+      <td>
+        <input id="selected_{{ item.id }}" type="checkbox" name="selected_book" value="{{ item.id }}">
+        <label for="selected_{{ item.id }}"></label>
+      </td>
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.author }}</td>
+      <td>{{ item.year }}</td>
+      <td>{{ item.pages }}</td>
+      <td>${{ item.price }}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="7">
+        <paginatorContainer [rowsOnPageSet]="[10,100,1000]"></paginatorContainer>
+      </td>
+    </tr>
+  </tfoot>
+</table>
